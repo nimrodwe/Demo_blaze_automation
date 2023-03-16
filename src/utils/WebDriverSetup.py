@@ -6,6 +6,8 @@ from selenium.webdriver.chrome.service import Service
 from src.pages.Header.Menu_button_click import MenuButtonsAction
 from src.pages.Header.Login_page import Login
 from src.pages.Header.Signup_page import SignupActions
+from src.pages.Cart_Page import CartActions
+from src.pages.Homepage.Item_Card_Page import ItemCardActions
 
 
 class WebDriverSetup(unittest.TestCase):
@@ -24,6 +26,8 @@ class WebDriverSetup(unittest.TestCase):
             self.menu_clicking = MenuButtonsAction(self.driver)
             self.login_actions = Login(self.driver)
             self.signup_actions = SignupActions(self.driver)
+            self.cart_action = CartActions(self.driver)
+            self.item_card_actions = ItemCardActions(self.driver)
 
 
             time.sleep(1)
