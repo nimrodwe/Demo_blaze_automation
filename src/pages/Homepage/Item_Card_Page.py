@@ -15,3 +15,7 @@ class ItemCardActions:
     def item_add_to_cart(self):
         WebDriverWait(self.driver, 5).until(
             EC.visibility_of_element_located((By.XPATH, ItemProdpage_Locator.add_to_cart_button))).click()
+
+    def item_name_visual(self):
+        WebDriverWait(self.driver, 5).until(
+            EC.visibility_of_element_located((By.XPATH, ItemProdpage_Locator.item_name)))
