@@ -8,6 +8,7 @@ from src.pages.Header.Login_page import Login
 from src.pages.Header.Signup_page import SignupActions
 from src.pages.Cart_Page import CartActions
 from src.pages.Homepage.Item_Card_Page import ItemCardActions
+from src.pages.Homepage.RIght_Left_Arrow_Page import ArrowActions
 
 
 class WebDriverSetup(unittest.TestCase):
@@ -17,7 +18,7 @@ class WebDriverSetup(unittest.TestCase):
             chromedriver_path = "chromedriver.exe"
             service = Service(executable_path=chromedriver_path)
             options = Options()
-            options.headless = True
+            options.headless = False
             options.add_argument("--disable-extensions")
             self.driver = webdriver.Chrome(service=service, options=options)
             self.driver.maximize_window()
@@ -28,6 +29,7 @@ class WebDriverSetup(unittest.TestCase):
             self.signup_actions = SignupActions(self.driver)
             self.cart_action = CartActions(self.driver)
             self.item_card_actions = ItemCardActions(self.driver)
+            self.arrow_action = ArrowActions(self.driver)
 
 
             time.sleep(1)

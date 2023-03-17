@@ -4,4 +4,5 @@ class Menulocator:
     about_us_locator = '//*[@id="navbarExample"]/ul/li[3]/a'
     cart_locator = '//*[@id="cartur"]'
     logout_locator = '//*[@id="logout2"]'
+    icon_locator = '//*[@id="nava"]'
 

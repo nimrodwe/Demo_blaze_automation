@@ -23,4 +23,7 @@ class MenuButtonsAction:
     def logout_click(self):
         WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.XPATH, Menulocator.logout_locator))).click()
 
+    def icon_click(self):
+        WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.XPATH, Menulocator.icon_locator))).click()
+
 
