@@ -26,4 +26,6 @@ class MenuButtonsAction:
     def icon_click(self):
         WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.XPATH, Menulocator.icon_locator))).click()
 
+    def welcome_user_click(self):
+        WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.XPATH, Menulocator.welcome_user))).click()
 

@@ -5,4 +5,7 @@ class Menulocator:
     cart_locator = '//*[@id="cartur"]'
     logout_locator = '//*[@id="logout2"]'
     icon_locator = '//*[@id="nava"]'
+    # if user is logged
+    welcome_user = '//*[@id="nameofuser"]'
+
 
